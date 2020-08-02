@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<body>
+   <div class="w-50 p-3">
+      <table class="table">
+         <tr>
+            <th style="width: 20%" scope="col">City</th>
+            <th style="width: 20%" scope="col">Population</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for key, value in cities.items() %}
+               <tr>
+                  <th> {{ key }} </th>
+                  <td> {{ value }} </td>
+               </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+   </div>
+ </body>
+{% endblock %}

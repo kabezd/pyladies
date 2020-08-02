@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="w-50 p-3">
+    <h3> Which city would you like to find?</h3>
+    <form action = "{{  url_for('find_city_post') }}" method="POST">
+        <p>Name of the city: <input type = "text" name = "city" /></p>
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
